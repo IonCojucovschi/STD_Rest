@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:id="@+id/background_wrapper_content">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Read QR Code"
+            android:id="@+id/title_text"
+            android:layout_weight="6" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:weightSum="10"
+        android:gravity="center">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8.5"
+            android:weightSum="10"
+            android:gravity="center">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6">
+                <View
+                    android:id="@+id/view_1code"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="@dimen/view_code_dimen_lng"
+                    android:layout_width="@dimen/view_code_dimen_lat"
+                    android:background="#4286f4" />
+                <View
+                    android:id="@+id/view_2code"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="@dimen/view_code_dimen_lng"
+                    android:layout_width="@dimen/view_code_dimen_lat"
+                    android:background="#4286f4" />
+                <View
+                    android:id="@+id/view_3code"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="@dimen/view_code_dimen_lat"
+                    android:layout_width="@dimen/view_code_dimen_lng"
+                    android:background="#4286f4" />
+                <View
+                    android:id="@+id/view_4code"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="@dimen/view_code_dimen_lat"
+                    android:layout_width="@dimen/view_code_dimen_lng"
+                    android:background="#4286f4" />
+                <View
+                    android:id="@+id/view_5code"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="@dimen/view_code_dimen_lat"
+                    android:layout_width="@dimen/view_code_dimen_lng"
+                    android:background="#4286f4" />
+                <View
+                    android:id="@+id/view_6code"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="@dimen/view_code_dimen_lat"
+                    android:layout_width="@dimen/view_code_dimen_lng"
+                    android:background="#4286f4" />
+                <View
+                    android:id="@+id/view_7code"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_height="@dimen/view_code_dimen_lng"
+                    android:layout_width="@dimen/view_code_dimen_lat"
+                    android:background="#4286f4" />
+                <View
+                    android:id="@+id/view_8code"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="@dimen/view_code_dimen_lng"
+                    android:layout_width="@dimen/view_code_dimen_lat"
+                    android:background="#4286f4" />
+                <ImageView
+                    android:padding="15dp"
+                    android:id="@+id/qr_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="2"
+        android:weightSum="10"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/table_number_code"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Table no." />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_5_in_dp">
+            <ImageView
+                android:id="@+id/scan_image"
+                android:layout_width="20dp"
+                android:gravity="center"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/table_value_number_code"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="27" />
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/table_confirm_value"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:text="Order AT TABLE" />
+</LinearLayout>

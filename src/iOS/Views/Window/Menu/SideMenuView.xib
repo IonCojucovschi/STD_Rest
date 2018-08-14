@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="SideMenuView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ySV-2H-UAK">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nl9-TZ-5pt">
+                            <rect key="frame" x="0.0" y="20" width="56.5" height="647"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AHU-He-Uua">
+                                    <rect key="frame" x="0.0" y="5" width="57" height="57"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X7I-4j-Voe">
+                                            <rect key="frame" x="24" y="17" width="23" height="22.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="X7I-4j-Voe" secondAttribute="height" multiplier="1:1" id="AqZ-Dh-4gV"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="AHU-He-Uua" secondAttribute="height" multiplier="1:1" id="AaJ-Wa-Jgp"/>
+                                        <constraint firstItem="X7I-4j-Voe" firstAttribute="centerY" secondItem="AHU-He-Uua" secondAttribute="centerY" id="W8p-cw-Waf"/>
+                                        <constraint firstItem="X7I-4j-Voe" firstAttribute="width" secondItem="AHU-He-Uua" secondAttribute="width" multiplier="0.4" id="a2k-Qf-gvi"/>
+                                        <constraint firstAttribute="trailing" secondItem="X7I-4j-Voe" secondAttribute="trailing" constant="10" id="z1j-fM-D6A"/>
+                                    </constraints>
+                                </view>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="55" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BVi-qx-g2N">
+                                    <rect key="frame" x="0.0" y="62" width="56.5" height="585"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="AHU-He-Uua" firstAttribute="width" secondItem="Nl9-TZ-5pt" secondAttribute="width" id="1LR-xC-tug"/>
+                                <constraint firstItem="AHU-He-Uua" firstAttribute="top" secondItem="Nl9-TZ-5pt" secondAttribute="top" constant="5" id="2xw-9n-kj7"/>
+                                <constraint firstItem="BVi-qx-g2N" firstAttribute="top" secondItem="AHU-He-Uua" secondAttribute="bottom" id="MC0-0L-9ch"/>
+                                <constraint firstItem="BVi-qx-g2N" firstAttribute="leading" secondItem="Nl9-TZ-5pt" secondAttribute="leading" id="Uvu-LH-eFC"/>
+                                <constraint firstAttribute="bottom" secondItem="BVi-qx-g2N" secondAttribute="bottom" id="VYT-oD-1Xl"/>
+                                <constraint firstAttribute="trailing" secondItem="AHU-He-Uua" secondAttribute="trailing" id="nh5-YM-Ur7"/>
+                                <constraint firstItem="AHU-He-Uua" firstAttribute="leading" secondItem="Nl9-TZ-5pt" secondAttribute="leading" id="qJ1-6w-crB"/>
+                                <constraint firstAttribute="trailing" secondItem="BVi-qx-g2N" secondAttribute="trailing" id="yTD-De-db5"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Nl9-TZ-5pt" firstAttribute="leading" secondItem="ySV-2H-UAK" secondAttribute="leading" id="PvF-05-xzG"/>
+                        <constraint firstAttribute="bottom" secondItem="Nl9-TZ-5pt" secondAttribute="bottom" id="db5-hr-QWj"/>
+                        <constraint firstItem="Nl9-TZ-5pt" firstAttribute="width" secondItem="ySV-2H-UAK" secondAttribute="width" multiplier="0.15" id="evr-vZ-Sod"/>
+                        <constraint firstItem="Nl9-TZ-5pt" firstAttribute="top" secondItem="ySV-2H-UAK" secondAttribute="top" constant="20" id="l9z-2y-51v"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ySV-2H-UAK" secondAttribute="trailing" id="0cQ-x3-3jB"/>
+                <constraint firstItem="ySV-2H-UAK" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="CdT-hN-0NO"/>
+                <constraint firstItem="ySV-2H-UAK" firstAttribute="top" secondItem="1" secondAttribute="top" id="NNb-XJ-vmF"/>
+                <constraint firstAttribute="bottom" secondItem="ySV-2H-UAK" secondAttribute="bottom" id="VeP-8P-E14"/>
+            </constraints>
+            <connections>
+                <outlet property="TableView" destination="BVi-qx-g2N" id="Tpy-Ct-64s"/>
+                <outlet property="imgMenu" destination="X7I-4j-Voe" id="W7p-bO-ECQ"/>
+                <outlet property="viewContainer" destination="Nl9-TZ-5pt" id="RUx-IS-bNk"/>
+                <outlet property="viewRoot" destination="ySV-2H-UAK" id="cTO-Yd-Pbn"/>
+                <outlet property="viewTouchAreMenu" destination="AHU-He-Uua" id="ZsR-EI-WnQ"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

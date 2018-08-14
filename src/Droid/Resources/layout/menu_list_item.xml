@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="@dimen/menu_width"
+    android:layout_height="@dimen/menu_width"
+    android:id="@+id/menu_item_root">
+    <FFImageLoading.Views.ImageViewAsync
+        android:padding="@dimen/menu_icons_padding"
+        android:id="@+id/menu_item_list_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_heith_image" />
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:id="@+id/menu_itemLine"
+        android:background="#000000" />
+</LinearLayout>

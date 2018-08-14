@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_content_view">
+    <ScrollView
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent">
+                <TextView
+                    android:id="@+id/event_name"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="Event Name"
+                    android:layout_marginTop="@dimen/margin_10_in_dp"
+                    android:layout_marginBottom="@dimen/margin_10_in_dp"
+                    android:padding="@dimen/margin_10_in_dp"
+                    android:textSize="@dimen/margin_20_in_dp" />
+                <RelativeLayout
+                    android:layout_height="@dimen/margin_230_in_dp"
+                    android:layout_width="match_parent">
+                    <RelativeLayout
+                        android:layout_margin="@dimen/margin_5_in_dp"
+                        android:layout_height="@dimen/margin_200_in_dp"
+                        android:layout_width="match_parent">
+                        <View
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:id="@+id/image_event_wrapper" />
+                        <FFImageLoading.Views.ImageViewAsync
+                            android:layout_margin="@dimen/margin_5_in_dp"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:scaleType="fitXY"
+                            android:id="@+id/events_image" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginBottom="@dimen/margin_5_in_dp"
+                        android:layout_marginLeft="@dimen/margin_30_in_dp"
+                        android:layout_height="@dimen/menu_width"
+                        android:layout_width="@dimen/margin_200_in_dp">
+                        <FFImageLoading.Views.ImageViewAsync
+                            android:layout_height="match_parent"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/date_image_background"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/events_date_background"
+                            android:foregroundGravity="fill" />
+                        <LinearLayout
+                            android:layout_marginBottom="@dimen/margin_5_in_dp"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="20">
+                            <TextView
+                                android:id="@+id/time_when_ev_start"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/margin_15_in_dp"
+                                android:layout_width="0dp"
+                                android:layout_weight="13"
+                                android:gravity="fill"
+                                android:text="17 february  " />
+                            <FFImageLoading.Views.ImageViewAsync
+                                android:layout_height="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_marginTop="@dimen/margin_8_in_dp"
+                                android:layout_marginBottom="@dimen/margin_8_in_dp"
+                                android:id="@+id/image_date_separator"
+                                android:src="@drawable/line_separator_event" />
+                            <TextView
+                                android:id="@+id/hour_when_ev_start"
+                                android:layout_marginRight="@dimen/margin_8_in_dp"
+                                android:layout_height="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="6"
+                                android:gravity="center"
+                                android:text="20:30" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/event_description"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10_in_dp"
+                    android:layout_marginRight="@dimen/margin_10_in_dp"
+                    android:layout_width="match_parent"
+                    android:text="Event description ads asdfa sthy rgther"
+                    android:textSize="@dimen/margin_20_in_dp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

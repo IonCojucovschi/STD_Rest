@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{9F9DA645-8438-4B9D-A89B-1CB03595F208}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>iOS</RootNamespace>
+    <AssemblyName>iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer: Marco Morini (A49ZX46D5J)</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>57507</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <CodesignProvision>VS: eu.techmobile.stadium Development</CodesignProvision>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
+<CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer: Marco Morini (A49ZX46D5J)</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <CodesignProvision>VS: eu.techmobile.stadium Development</CodesignProvision>
+<CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+<DeviceSpecificBuild>true</DeviceSpecificBuild>
+<RunCodeAnalysis>true</RunCodeAnalysis>  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer: Marco Morini (A49ZX46D5J)</CodesignKey>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <CodesignProvision>VS: eu.techmobile.stadium Development</CodesignProvision>
+<RunCodeAnalysis>true</RunCodeAnalysis><CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer: Marco Morini (A49ZX46D5J)</CodesignKey>
+    <MtouchFastDev>true</MtouchFastDev>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <CodesignProvision>VS: eu.techmobile.stadium Development</CodesignProvision>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
+    <MtouchDebug>true</MtouchDebug>
+<RunCodeAnalysis>true</RunCodeAnalysis>  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="FabricSdk">
+      <HintPath>..\..\packages\Fabric.1.4\lib\Xamarin.iOS10\FabricSdk.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="I18NPortable">
+      <HintPath>..\..\packages\I18NPortable.0.6.0\lib\netstandard1.1\I18NPortable.dll</HintPath>
+    </Reference>
+    <Reference Include="Splat">
+      <HintPath>..\..\packages\Splat.1.6.0\lib\Xamarin.iOS10\Splat.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces">
+      <HintPath>..\..\packages\Rx-Interfaces.2.2.5\lib\portable-windows8+net45+wp8\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Core">
+      <HintPath>..\..\packages\Rx-Core.2.2.5\lib\portable-windows8+net45+wp8\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq">
+      <HintPath>..\..\packages\Rx-Linq.2.2.5\lib\portable-windows8+net45+wp8\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices">
+      <HintPath>..\..\packages\Rx-PlatformServices.2.2.5\lib\portable-windows8+net45+wp8\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="ReactiveUI">
+      <HintPath>..\..\packages\reactiveui-core.7.4.0\lib\Xamarin.iOS10\ReactiveUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Akavache">
+      <HintPath>..\..\packages\akavache.core.5.0.0\lib\Xamarin.iOS10\Akavache.dll</HintPath>
+    </Reference>
+    <Reference Include="Akavache.Sqlite3">
+      <HintPath>..\..\packages\akavache.sqlite3.5.0.0\lib\Portable-Net45+Win8+WP8+Wpa81\Akavache.Sqlite3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="FabricSdk.Platform">
+      <HintPath>..\..\packages\Fabric.1.4\lib\Xamarin.iOS10\FabricSdk.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="WebP.Touch">
+      <HintPath>..\..\packages\WebP.Touch.1.0.8\lib\Xamarin.iOS10\WebP.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXing.Net.Mobile.Core">
+      <HintPath>..\..\packages\ZXing.Net.Mobile.2.4.1\lib\Xamarin.iOS10\ZXing.Net.Mobile.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.portable">
+      <HintPath>..\..\packages\ZXing.Net.Mobile.2.4.1\lib\Xamarin.iOS10\zxing.portable.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXingNetMobile">
+      <HintPath>..\..\packages\ZXing.Net.Mobile.2.4.1\lib\Xamarin.iOS10\ZXingNetMobile.dll</HintPath>
+    </Reference>
+    <Reference Include="AnswersKit">
+      <HintPath>..\..\packages\Crashlytics.1.4\lib\Xamarin.iOS10\AnswersKit.dll</HintPath>
+    </Reference>
+    <Reference Include="AnswersKit.Platform">
+      <HintPath>..\..\packages\Crashlytics.1.4\lib\Xamarin.iOS10\AnswersKit.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="CrashlyticsKit">
+      <HintPath>..\..\packages\Crashlytics.1.4\lib\Xamarin.iOS10\CrashlyticsKit.dll</HintPath>
+    </Reference>
+    <Reference Include="CrashlyticsKit.Platform">
+      <HintPath>..\..\packages\Crashlytics.1.4\lib\Xamarin.iOS10\CrashlyticsKit.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core">
+      <HintPath>..\..\packages\SQLitePCLRaw.core.1.1.11\lib\Xamarin.iOS10\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.lib.e_sqlite3">
+      <HintPath>..\..\packages\SQLitePCLRaw.lib.e_sqlite3.ios_unified.static.1.1.11\lib\Xamarin.iOS10\SQLitePCLRaw.lib.e_sqlite3.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.internal">
+      <HintPath>..\..\packages\SQLitePCLRaw.provider.internal.ios_unified.1.1.11\lib\Xamarin.iOS10\SQLitePCLRaw.provider.internal.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_e_sqlite3">
+      <HintPath>..\..\packages\SQLitePCLRaw.bundle_e_sqlite3.1.1.11\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_e_sqlite3.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2">
+      <HintPath>..\..\packages\SQLitePCLRaw.bundle_e_sqlite3.1.1.11\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Json" />
+    <Reference Include="Plugin.Connectivity.Abstractions">
+      <HintPath>..\..\packages\Xam.Plugin.Connectivity.3.1.1\lib\Xamarin.iOS10\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity">
+      <HintPath>..\..\packages\Xam.Plugin.Connectivity.3.1.1\lib\Xamarin.iOS10\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="ReactiveUI.Fody.Helpers">
+      <HintPath>..\..\packages\ReactiveUI.Fody.2.2.11\lib\Xamarin.iOS10\ReactiveUI.Fody.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="MemoryCache">
+      <HintPath>..\..\packages\MemoryCache.1.2.0\lib\MemoryCache.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Auth">
+      <HintPath>..\..\packages\Xamarin.Auth.1.6.0.2\lib\Xamarin.iOS10\Xamarin.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Com.OneSignal.Abstractions">
+      <HintPath>..\..\packages\Com.OneSignal.3.2.0\lib\Xamarin.iOS10\Com.OneSignal.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Com.OneSignal">
+      <HintPath>..\..\packages\Com.OneSignal.3.2.0\lib\Xamarin.iOS10\Com.OneSignal.dll</HintPath>
+    </Reference>
+    <Reference Include="OneSignal.iOS.Binding">
+      <HintPath>..\..\packages\Com.OneSignal.3.2.0\lib\Xamarin.iOS10\OneSignal.iOS.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Permissions">
+      <HintPath>..\..\packages\Plugin.Permissions.3.0.0.12\lib\xamarinios10\Plugin.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp">
+      <HintPath>..\..\packages\SkiaSharp.1.60.1\lib\Xamarin.iOS\SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.DeviceInfo">
+      <HintPath>..\..\packages\Xam.Plugin.DeviceInfo.4.0.0.13\lib\xamarinios10\Plugin.DeviceInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Geolocator">
+      <HintPath>..\..\packages\Xam.Plugin.Geolocator.4.5.0.6\lib\xamarinios10\Plugin.Geolocator.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media">
+      <HintPath>..\..\packages\Xam.Plugin.Media.4.0.0.9\lib\xamarinios10\Plugin.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="Xam.PayPal.iOS">
+      <HintPath>..\..\packages\Xam.PayPal.iOS.2.16.2.1\lib\Xamarin.iOS10\Xam.PayPal.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xam.PayPal.iOS.Helpers">
+      <HintPath>..\..\packages\Xam.PayPal.iOS.2.16.2.1\lib\Xamarin.iOS10\Xam.PayPal.iOS.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\..\packages\RestSharp.106.3.1\lib\netstandard2.0\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.2.4.3.840\lib\Xamarin.iOS10\FFImageLoading.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Platform">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.2.4.3.840\lib\Xamarin.iOS10\FFImageLoading.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Svg.Platform">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.Svg.2.4.3.840\lib\Xamarin.iOS10\FFImageLoading.Svg.Platform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-83.5x83.5%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ItunesArtwork%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Page\" />
+    <Folder Include="TableViewCell\" />
+    <Folder Include="Storyboard\" />
+    <Folder Include="Page\BasePage\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\Window\" />
+    <Folder Include="Views\Window\Base\" />
+    <Folder Include="Page\BasePage\View\">
+    </Folder>
+    <Folder Include="Page\Dashboard\">
+    </Folder>
+    <Folder Include="Page\Dashboard\Beer\">
+    </Folder>
+    <Folder Include="Page\Dashboard\Cart\">
+    </Folder>
+    <Folder Include="Page\Dashboard\Cart\QR\">
+    </Folder>
+    <Folder Include="TableViewCell\BeerList\">
+    </Folder>
+    <Folder Include="Resources\Fonts\">
+    </Folder>
+    <Folder Include="TableViewCell\Home\">
+    </Folder>
+    <Folder Include="Views\Window\Menu\">
+    </Folder>
+    <Folder Include="Views\Window\Menu\UI\">
+    </Folder>
+    <Folder Include="Views\Window\Menu\Cell\">
+    </Folder>
+    <Folder Include="Page\Dashboard\Cart\Order\">
+    </Folder>
+    <Folder Include="TableViewCell\Order\">
+    </Folder>
+    <Folder Include="Helpers\">
+    </Folder>
+    <Folder Include="TableViewCell\Order\Orders\">
+    </Folder>
+    <Folder Include="Page\Dashboard\Event\">
+    </Folder>
+    <Folder Include="Page\Dashboard\Feedback\">
+    </Folder>
+    <Folder Include="TableViewCell\Food\">
+    </Folder>
+    <Folder Include="TableViewCell\Events\">
+    </Folder>
+    <Folder Include="TableViewCell\Feedback\">
+    </Folder>
+    <Folder Include="Page\AccessApp\">
+    </Folder>
+    <Folder Include="Page\AccessApp\Registration\">
+    </Folder>
+    <Folder Include="Views\Custom\">
+    </Folder>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Storyboard\Main.storyboard" />
+    <InterfaceDefinition Include="Storyboard\LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Views\Window\Menu\SideMenuView.xib" />
+    <InterfaceDefinition Include="Views\Window\Menu\Cell\MenuViewCell.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+    <None Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Page\BasePage\BasePage.cs" />
+    <Compile Include="Page\Splash.cs" />
+    <Compile Include="Page\Splash.designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AkavacheSqliteLinkerOverride.cs" />
+    <Compile Include="Page\Splash.Cross.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Home.cs" />
+    <Compile Include="Page\Home.designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\BasePage\View\HeaderView.cs" />
+    <Compile Include="Page\BasePage\View\HeaderView.designer.cs">
+      <DependentUpon>HeaderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\BasePage\BasePageNavigation.cs" />
+    <Compile Include="Page\Dashboard\Call.cs" />
+    <Compile Include="Page\Dashboard\Call.designer.cs">
+      <DependentUpon>Call.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Dashboard\Beer\BeerList.cs" />
+    <Compile Include="Page\Dashboard\Beer\BeerList.designer.cs">
+      <DependentUpon>BeerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Dashboard\Cart\QR\Code.cs" />
+    <Compile Include="Page\Dashboard\Cart\QR\Code.designer.cs">
+      <DependentUpon>Code.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewCell\Home\HomeCell.cs" />
+    <Compile Include="TableViewCell\Home\HomeCell.designer.cs">
+      <DependentUpon>HomeCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Window\Menu\SideMenuView.cs" />
+    <Compile Include="Views\Window\Menu\SideMenuView.designer.cs">
+      <DependentUpon>SideMenuView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Window\Menu\UI\MenuView.cs" />
+    <Compile Include="Views\Window\Menu\Cell\MenuViewCell.cs" />
+    <Compile Include="Views\Window\Menu\Cell\MenuViewCell.designer.cs">
+      <DependentUpon>MenuViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Dashboard\Cart\Order\OrderBar.cs" />
+    <Compile Include="Page\Dashboard\Cart\Order\OrderBar.designer.cs">
+      <DependentUpon>OrderBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Dashboard\Cart\Order\OrderTable.cs" />
+    <Compile Include="Page\Dashboard\Cart\Order\OrderTable.designer.cs">
+      <DependentUpon>OrderTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Dashboard\Cart\Order\Order.cs" />
+    <Compile Include="Page\Dashboard\Cart\Order\Order.designer.cs">
+      <DependentUpon>Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewCell\Order\OrderBarCell.cs" />
+    <Compile Include="TableViewCell\Order\OrderBarCell.designer.cs">
+      <DependentUpon>OrderBarCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewCell\Order\OrderTableCell.cs" />
+    <Compile Include="TableViewCell\Order\OrderTableCell.designer.cs">
+      <DependentUpon>OrderTableCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewCell\Order\OrderCell.cs" />
+    <Compile Include="TableViewCell\Order\OrderCell.designer.cs">
+      <DependentUpon>OrderCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewCell\BeerList\BeerListCell.cs" />
+    <Compile Include="TableViewCell\BeerList\BeerListCell.designer.cs">
+      <DependentUpon>BeerListCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\PPHelper.cs" />
+    <Compile Include="Page\Dashboard\Orders.cs" />
+    <Compile Include="Page\Dashboard\Orders.designer.cs">
+      <DependentUpon>Orders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewCell\Order\Orders\OrdersCell.cs" />
+    <Compile Include="TableViewCell\Order\Orders\OrdersCell.designer.cs">
+      <DependentUpon>OrdersCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Dashboard\Event\Events.cs" />
+    <Compile Include="Page\Dashboard\Event\Events.designer.cs">
+      <DependentUpon>Events.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Dashboard\Event\EventDetails.cs" />
+    <Compile Include="Page\Dashboard\Event\EventDetails.designer.cs">
+      <DependentUpon>EventDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Dashboard\Feedback\Feedback.cs" />
+    <Compile Include="Page\Dashboard\Feedback\Feedback.designer.cs">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Dashboard\FoodList.cs" />
+    <Compile Include="Page\Dashboard\FoodList.designer.cs">
+      <DependentUpon>FoodList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewCell\Food\FoodListCell.cs" />
+    <Compile Include="TableViewCell\Food\FoodListCell.designer.cs">
+      <DependentUpon>FoodListCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewCell\Events\EventCollectionCell.cs" />
+    <Compile Include="TableViewCell\Events\EventCollectionCell.designer.cs">
+      <DependentUpon>EventCollectionCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewCell\Events\EventCollectionSubTagCell.cs" />
+    <Compile Include="TableViewCell\Events\EventCollectionSubTagCell.designer.cs">
+      <DependentUpon>EventCollectionSubTagCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewCell\Events\EventNameCell.cs" />
+    <Compile Include="TableViewCell\Events\EventNameCell.designer.cs">
+      <DependentUpon>EventNameCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewCell\Feedback\FeedbackCell.cs" />
+    <Compile Include="TableViewCell\Feedback\FeedbackCell.designer.cs">
+      <DependentUpon>FeedbackCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Window\Base\ProjectBaseView.cs" />
+    <Compile Include="Views\Window\Base\ProjectBaseWindow.cs" />
+    <Compile Include="Page\Dashboard\Feedback\FeedbackGive.cs" />
+    <Compile Include="Page\Dashboard\Feedback\FeedbackGive.designer.cs">
+      <DependentUpon>FeedbackGive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableViewCell\Feedback\StatusCollectionCell.cs" />
+    <Compile Include="TableViewCell\Feedback\StatusCollectionCell.designer.cs">
+      <DependentUpon>StatusCollectionCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\AccessApp\Sign.cs" />
+    <Compile Include="Page\AccessApp\Sign.designer.cs">
+      <DependentUpon>Sign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\AccessApp\Registration\CreateAccount.cs" />
+    <Compile Include="Page\AccessApp\Registration\CreateAccount.designer.cs">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custom\WrapperHyperLabel.cs" />
+    <Compile Include="Views\Custom\WrapperHyperLabel.designer.cs">
+      <DependentUpon>WrapperHyperLabel.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Int.Core\Int.Core.csproj">
+      <Project>{C4CC3097-B789-455A-8EE2-FA51BCE43DC0}</Project>
+      <Name>Int.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Int.iOS\Int.iOS.csproj">
+      <Project>{C77CBFAD-9BC7-4F65-8D2F-197F6CDF4774}</Project>
+      <Name>Int.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Core\Resources\Drawables\logo_icon.png">
+      <Link>Resources\logo_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\back_icon.png">
+      <Link>Resources\back_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\menu_icon.png">
+      <Link>Resources\menu_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\shop_icon.png">
+      <Link>Resources\shop_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\beer_icon.png">
+      <Link>Resources\beer_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\call_icon.png">
+      <Link>Resources\call_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\events_icon.png">
+      <Link>Resources\events_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\feedback_icon.png">
+      <Link>Resources\feedback_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\order_icon.png">
+      <Link>Resources\order_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\qr_b_icon.png">
+      <Link>Resources\qr_b_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\qr_qf_icon.png">
+      <Link>Resources\qr_qf_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\wait_qr_icon.gif">
+      <Link>Resources\wait_qr_icon.gif</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\delete_order_icon.png">
+      <Link>Resources\delete_order_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Fonts\OpenSans-Bold.ttf">
+      <Link>Resources\Fonts\OpenSans-Bold.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Fonts\OpenSans-BoldItalic.ttf">
+      <Link>Resources\Fonts\OpenSans-BoldItalic.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Fonts\OpenSans-ExtraBold.ttf">
+      <Link>Resources\Fonts\OpenSans-ExtraBold.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Fonts\OpenSans-ExtraBoldItalic.ttf">
+      <Link>Resources\Fonts\OpenSans-ExtraBoldItalic.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Fonts\OpenSans-Italic.ttf">
+      <Link>Resources\Fonts\OpenSans-Italic.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Fonts\OpenSans-Light.ttf">
+      <Link>Resources\Fonts\OpenSans-Light.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Fonts\OpenSans-LightItalic.ttf">
+      <Link>Resources\Fonts\OpenSans-LightItalic.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Fonts\OpenSans-Regular.ttf">
+      <Link>Resources\Fonts\OpenSans-Regular.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Fonts\OpenSans-Semibold.ttf">
+      <Link>Resources\Fonts\OpenSans-Semibold.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Fonts\OpenSans-SemiboldItalic.ttf">
+      <Link>Resources\Fonts\OpenSans-SemiboldItalic.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\beer_home_icon.png">
+      <Link>Resources\beer_home_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\call_home_icon.png">
+      <Link>Resources\call_home_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\events_home_icon.png">
+      <Link>Resources\events_home_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\feedback_home_icon.png">
+      <Link>Resources\feedback_home_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\food_home_icon.png">
+      <Link>Resources\food_home_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\menu_open_icon.png">
+      <Link>Resources\menu_open_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\order_home_icon.png">
+      <Link>Resources\order_home_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Fonts\Roboto-Bold.ttf">
+      <Link>Resources\Fonts\Roboto-Bold.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\home_home_icon.png">
+      <Link>Resources\home_home_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\change_icon.png">
+      <Link>Resources\change_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\splash_icon.png">
+      <Link>Resources\splash_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\food_icon.png">
+      <Link>Resources\food_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\bad_feedback_icon.png">
+      <Link>Resources\bad_feedback_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\beer_feedback_icon.png">
+      <Link>Resources\beer_feedback_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\events_feedback_icon.png">
+      <Link>Resources\events_feedback_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\food_feedback_icon.png">
+      <Link>Resources\food_feedback_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\good_feedback_icon.png">
+      <Link>Resources\good_feedback_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\great_feedback_icon.png">
+      <Link>Resources\great_feedback_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\ok_feedback_icon.png">
+      <Link>Resources\ok_feedback_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\services_feedback_icon.png">
+      <Link>Resources\services_feedback_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\terrible_feedback_icon.png">
+      <Link>Resources\terrible_feedback_icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\feedback_close_icon.png">
+      <Link>Resources\feedback_close_icon.png</Link>
+     </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\backround_event_details.png">
+      <Link>Resources\backround_event_details.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\events_date_background.png">
+      <Link>Resources\events_date_background.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\line_separator_event.png">
+      <Link>Resources\line_separator_event.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\left_event_arrow.png">
+      <Link>Resources\left_event_arrow.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\right_event_arrow.png">
+      <Link>Resources\right_event_arrow.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\sign_backround.png">
+      <Link>Resources\sign_backround.png</Link>
+       </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\facebook_logo.png">
+      <Link>Resources\facebook_logo.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Drawables\show_password.png">
+      <Link>Resources\show_password.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Fonts\Roboto-Regular.ttf">
+      <Link>Resources\Fonts\Roboto-Regular.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\Core\Resources\Fonts\Montserrat-Bold.ttf">
+      <Link>Resources\Fonts\Montserrat-Bold.ttf</Link>
+    </BundleResource>
+  </ItemGroup>
+  <Import Project="..\Core\Core.projitems" Label="Shared" Condition="Exists('..\Core\Core.projitems')" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Import Project="..\..\packages\Fody.2.0.7\build\netstandard1.4\Fody.targets" Condition="Exists('..\..\packages\Fody.2.0.7\build\netstandard1.4\Fody.targets')" />
+</Project>

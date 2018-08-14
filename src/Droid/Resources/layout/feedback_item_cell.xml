@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_150_in_dp"
+    android:weightSum="10"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_margin="@dimen/margin_5_in_dp"
+        android:id="@+id/fedback_cell_root_view"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:weightSum="20">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:layout_width="match_parent"
+            android:weightSum="20">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/margin_5_in_dp"
+                android:weightSum="14">
+                <FFImageLoading.Views.ImageViewAsync
+                    android:id="@+id/type_image_feedback"
+                    android:layout_height="0dp"
+                    android:layout_weight="14"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ok_feedback_icon" />
+                <TextView
+                    android:id="@+id/feedback_label_bottom_type"
+                    android:text="Services"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="@dimen/margin_10_in_dp"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="11"
+                android:weightSum="14"
+                android:orientation="vertical">
+                <View
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:id="@+id/feedback_label1"
+                        android:text="Services"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="5"
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:gravity="center">
+                    <LinearLayout
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent">
+                        <TextView
+                            android:id="@+id/feedback_status"
+                            android:text="Good"
+                            android:textColor="#000000"
+                            android:layout_height="match_parent"
+                            android:layout_width="wrap_content" />
+                        <TextView
+                            android:layout_marginLeft="@dimen/margin_5_in_dp"
+                            android:id="@+id/feedback_votes"
+                            android:text="(247 votes)"
+                            android:textColor="#000000"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent" />
+                <RelativeLayout
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:layout_width="match_parent">
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:id="@+id/progress_view"
+                        android:background="#000000" />
+                    <LinearLayout
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+                        <View
+                            android:layout_height="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:id="@+id/progress_view_20" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+                        <View
+                            android:layout_height="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="4"
+                            android:id="@+id/progress_view_40" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+                        <View
+                            android:layout_height="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="6"
+                            android:id="@+id/progress_view_60" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+                        <View
+                            android:layout_height="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="8"
+                            android:id="@+id/progress_view_80" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+                        <View
+                            android:layout_height="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="10"
+                            android:id="@+id/progress_view_100" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <View
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:layout_width="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="10">
+                <View
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1" />
+                <FFImageLoading.Views.ImageViewAsync
+                    android:padding="@dimen/padding_count_item_chart"
+                    android:id="@+id/emoji_feedback"
+                    android:layout_height="0dp"
+                    android:layout_weight="8"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:src="@drawable/good_feedback_icon" />
+                <View
+                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

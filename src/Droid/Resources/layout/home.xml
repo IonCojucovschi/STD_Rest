@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:weightSum="10"
+    android:layout_height="match_parent">
+    <FFImageLoading.Views.ImageViewAsync
+        android:id="@+id/logo_home"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/logo_home_margins"
+        android:paddingRight="@dimen/logo_home_margins"
+        android:paddingTop="@dimen/logo_margin_top_bottom"
+        android:paddingBottom="@dimen/logo_margin_top_bottom"
+        android:background="#000000"
+        android:layout_width="match_parent"
+        android:src="@drawable/logo_icon" />
+    <Int.Droid.Factories.Adapter.RecyclerView.BaseRecyclerView
+        android:id="@+id/home_list"
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9" />
+</LinearLayout>

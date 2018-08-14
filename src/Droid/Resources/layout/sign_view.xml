@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FFImageLoading.Views.ImageViewAsync
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/margin_30_in_dp"
+        android:layout_marginRight="@dimen/margin_30_in_dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="667">
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="40" />
+        <FFImageLoading.Views.ImageViewAsync
+            android:layout_marginLeft="@dimen/margin_30_in_dp"
+            android:layout_marginRight="@dimen/margin_30_in_dp"
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="67"
+            android:scaleType="fitCenter" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="0dp"
+            android:layout_weight="110"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:weightSum="10">
+            <TextView
+                android:id="@+id/email_label"
+                android:text="Email"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:layout_width="match_parent" />
+            <View
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:background="@null" />
+            <EditText
+                android:id="@+id/email_value"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:background="@null"
+                android:layout_width="match_parent" />
+            <View
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent" />
+            <View
+                android:id="@+id/email_underline"
+                android:layout_height="1dp"
+                android:background="#ffffff"
+                android:layout_width="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="0dp"
+            android:layout_weight="110"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:weightSum="10">
+            <TextView
+                android:id="@+id/password_label"
+                android:text="Pasword"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:layout_width="match_parent" />
+            <View
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent" />
+            <RelativeLayout
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:layout_width="match_parent">
+                <EditText
+                    android:layout_centerVertical="true"
+                    android:id="@+id/password_value"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:background="@null" />
+                <FFImageLoading.Views.ImageViewAsync
+                    android:id="@+id/show_pasword"
+                    android:layout_height="@dimen/margin_20_in_dp"
+                    android:layout_width="@dimen/margin_20_in_dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <View
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent" />
+            <View
+                android:id="@+id/password_underline"
+                android:layout_height="1dp"
+                android:background="#ffffff"
+                android:layout_width="match_parent" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_weight="70"
+            android:layout_height="0dp"
+            android:layout_width="match_parent">
+            <TextView
+                android:id="@+id/forgot_password"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="Forgot Paswod?" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/sign_in"
+            android:layout_height="0dp"
+            android:layout_weight="55"
+            android:layout_width="match_parent"
+            android:text="Sign IN"
+            android:gravity="center" />
+        <LinearLayout
+            android:layout_height="0dp"
+            android:layout_weight="100"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/not_have_account_text"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="not_have an account?" />
+            <TextView
+                android:id="@+id/sign_up_text"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Sign up" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/facebook_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="0dp"
+            android:layout_weight="55"
+            android:layout_width="match_parent">
+            <FFImageLoading.Views.ImageViewAsync
+                android:id="@+id/logo_facebook"
+                android:layout_width="@dimen/margin_20_in_dp"
+                android:layout_height="@dimen/margin_20_in_dp" />
+            <TextView
+                android:gravity="center"
+                android:id="@+id/facebooktext"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:text="Some text" />
+        </LinearLayout>
+        <View
+            android:layout_height="0dp"
+            android:layout_weight="40"
+            android:layout_width="match_parent" />
+    </LinearLayout>
+</RelativeLayout>

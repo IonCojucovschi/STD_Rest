@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/berr_item_height_expandable"
+    android:weightSum="10">
+    <LinearLayout
+        android:id="@+id/left_side_item"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:padding="@dimen/margin_10_in_dp"
+        android:weightSum="10">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:weightSum="10">
+            <LinearLayout
+                android:id="@+id/beer_vrapper_content_left"
+                android:layout_height="0dp"
+                android:layout_width="match_parent"
+                android:layout_weight="8">
+                <RelativeLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:id="@+id/beer_price_text_left"
+                        android:layout_marginTop="@dimen/margin_10_in_dp"
+                        android:layout_marginRight="@dimen/margin_20_in_dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3.5" />
+                    <FFImageLoading.Views.ImageViewAsync
+                        android:id="@+id/beer_item_image_left"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/margin_20_in_dp" />
+                    <TextView
+                        android:id="@+id/add_item_service_left"
+                        android:layout_height="@dimen/margin_60_in_dp"
+                        android:layout_width="@dimen/margin_60_in_dp"
+                        android:text="+"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true" />
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/margin_10_in_dp"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:weightSum="10"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <FFImageLoading.Views.ImageViewAsync
+                            android:id="@+id/beer_item_image2_left"
+                            android:layout_width="@dimen/margin_70_in_dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="5.5"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true" />
+                        <LinearLayout
+                            android:id="@+id/wraper_view_quantity_left"
+                            android:layout_height="0dp"
+                            android:layout_weight="4.5"
+                            android:layout_width="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="@dimen/margin_10_in_dp"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:weightSum="10">
+                            <TextView
+                                android:layout_height="@dimen/margin_30_in_dp"
+                                android:layout_width="@dimen/margin_30_in_dp"
+                                android:id="@+id/minus_item_left"
+                                android:text="-"
+                                android:gravity="center" />
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="3"
+                                android:id="@+id/quantity_item_left"
+                                android:text="2"
+                                android:gravity="center" />
+                            <TextView
+                                android:layout_height="@dimen/margin_30_in_dp"
+                                android:layout_width="@dimen/margin_30_in_dp"
+                                android:id="@+id/plus_item_left"
+                                android:text="+"
+                                android:gravity="center" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <TextView
+                    android:id="@+id/beer_name_text_left"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Brown Leffe"
+                    android:gravity="center" />
+                <TextView
+                    android:id="@+id/beer_volume_text_left"
+                    android:layout_marginLeft="@dimen/margin_20_in_dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.5cl" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/right_side_item"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:padding="@dimen/margin_10_in_dp"
+        android:weightSum="10">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:weightSum="10">
+            <LinearLayout
+                android:id="@+id/beer_vrapper_content_right"
+                android:layout_height="0dp"
+                android:layout_width="match_parent"
+                android:layout_weight="8">
+                <RelativeLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:id="@+id/beer_price_text_right"
+                        android:layout_marginTop="@dimen/margin_10_in_dp"
+                        android:layout_marginRight="@dimen/margin_20_in_dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3.5" />
+                    <FFImageLoading.Views.ImageViewAsync
+                        android:id="@+id/beer_item_image_right"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/margin_20_in_dp" />
+                    <TextView
+                        android:id="@+id/add_item_service_right"
+                        android:layout_height="@dimen/margin_60_in_dp"
+                        android:layout_width="@dimen/margin_60_in_dp"
+                        android:text="+"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true" />
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/margin_10_in_dp"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:weightSum="10"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <FFImageLoading.Views.ImageViewAsync
+                            android:id="@+id/beer_item_image2_right"
+                            android:layout_width="@dimen/margin_70_in_dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="5.5"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true" />
+                        <LinearLayout
+                            android:id="@+id/wraper_view_quantity_right"
+                            android:layout_height="0dp"
+                            android:layout_weight="4.5"
+                            android:layout_width="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="@dimen/margin_10_in_dp"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:weightSum="10">
+                            <TextView
+                                android:layout_height="@dimen/margin_30_in_dp"
+                                android:layout_width="@dimen/margin_30_in_dp"
+                                android:id="@+id/minus_item_right"
+                                android:text="-"
+                                android:gravity="center" />
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="3"
+                                android:id="@+id/quantity_item_right"
+                                android:text="2"
+                                android:gravity="center" />
+                            <TextView
+                                android:layout_height="@dimen/margin_30_in_dp"
+                                android:layout_width="@dimen/margin_30_in_dp"
+                                android:id="@+id/plus_item_right"
+                                android:text="+"
+                                android:gravity="center" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <TextView
+                    android:id="@+id/beer_name_text_right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Brown Leffe"
+                    android:gravity="center" />
+                <TextView
+                    android:id="@+id/beer_volume_text_right"
+                    android:layout_marginLeft="@dimen/margin_20_in_dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.5cl" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

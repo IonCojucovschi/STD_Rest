@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/feedback_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:background="#ffffff">
+    <LinearLayout
+        android:gravity="center"
+        android:weightSum="20"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:layout_width="match_parent">
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_weight="12"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:text="Client's feedback"
+            android:id="@+id/beedback_text_top" />
+    </LinearLayout>
+    <Int.Droid.Factories.Adapter.RecyclerView.BaseRecyclerView
+        android:id="@+id/fedback_list"
+        android:fadingEdge="none"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6.5" />
+    <View
+        android:layout_height="@dimen/margin_10_in_dp"
+        android:layout_width="match_parent" />
+    <TextView
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:text="GIVE US A FEEDBACK"
+        android:gravity="center"
+        android:id="@+id/give_feeedback_button" />
+</LinearLayout>

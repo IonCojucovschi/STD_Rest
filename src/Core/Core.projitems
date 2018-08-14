@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{8619121D-C7B7-4339-8450-D2101203E1BB}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Core</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Resources\Locales\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Resources\Locales\en\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Resources\Locales\it\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Resources\Locales\Page\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Extensions\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Services\MockServices\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\Contract\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Helpers\Manager\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Services\MockServices\RealServices\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\DTO\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\DAL\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Beer\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\Repository\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\DAL\Home\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Helpers\Manager\Home\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Beer\Order\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\DTO\Category\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\DTO\Order\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\DTO\Order\Post\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\DTO\Order\Get\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\DTO\Payment\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Helpers\Manager\Payment\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Beer\Order\Base\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Beer\QRCode\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Beer\QRCode\Base\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\DAL\Events\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Helpers\Manager\Feedback\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\DAL\Feedback\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Views\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Helpers\Manager\Event\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Feedback\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Events\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\DTO\Feedback\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\DTO\Feedback\Get\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\DTO\Feedback\Post\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\DTO\Notification\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\DTO\Notification\Post\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\AccessApp\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\AccessApp\Registration\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\DTO\Event\">
+    </Folder>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Service.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Base\ProjectBaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\FontsConstant.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SplashViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\Locales\Page\RShare.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Rest\RestCalls.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Rest\RestConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Rest\RestRutes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Response\IResponseWithMeta.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Response\MResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\Colors\ColorConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\Extensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Manager\UserManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Manager\SettingsManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Contract\IUserRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\Drawables\DrawableConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\PageConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\HomeViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Beer\BeerListViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CallViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DAL\UserModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Repository\UserRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DAL\IOrderContent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\Locales\Page\RHome.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DAL\IBeerContent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DAL\Home\IHome.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Manager\Home\MenuManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Beer\Order\OrderViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Beer\Order\OrderBarViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Beer\Order\OrderTableViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Manager\OrderManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DTO\ProductModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DTO\Category\CategoryModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MockServices\RealServices\CategoryService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MockServices\RealServices\AuthenticateService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Manager\ProductManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MockServices\RealServices\OrderService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DTO\Order\Post\OrderModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DTO\Order\Post\OrderType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DTO\Order\Get\OrderModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\Locales\Page\RBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\Locales\Page\ROrderBar.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\Locales\Page\ROrderTable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\Locales\Page\ROrderView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\Locales\Page\RBeerList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\Locales\Page\RCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\Locales\Page\RCallView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\Locales\Page\REvents.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\Locales\Page\RFeedback.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DTO\Payment\PaymentModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MockServices\RealServices\PaymentService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Manager\Payment\PaymentManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\OrdersViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Beer\Order\Base\BaseOrderPaymentViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Beer\Order\Base\BaseOrderViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Beer\QRCode\CodeViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Beer\QRCode\Base\BaseCodeViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FoodViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DAL\Events\EventModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Manager\Feedback\FeedbackManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Contract\IFeedback.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DAL\Feedback\FeedbackModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Base\ProjectNavigationBaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Views\FeedbackWindowViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\Locales\Page\RFood.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\Locales\Page\ROrders.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Contract\ICategory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DAL\Feedback\CategoryModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Manager\Event\EventManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Contract\IEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Feedback\FeedbackViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Feedback\FeedbackGiveViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DAL\Events\EventMainModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Events\EventDetailsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Events\EventsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MockServices\RealServices\FeedbackService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MockServices\RealServices\CallService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MockServices\RealServices\EventsService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DTO\Feedback\Get\FeedbackModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DTO\Notification\Post\NotificationModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MockServices\RealServices\NotificationService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AccessApp\SignViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AccessApp\Registration\CreateAccountViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DTO\Event\EventModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\Locales\Page\RSign.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Resources\Locales\Page\RCreate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Locales\en\en.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Locales\it\it.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Models\DTO\info.txt" />
+    <None Include="$(MSBuildThisFileDirectory)Models\DAL\info.txt" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\logo_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\menu_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\back_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\shop_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\feedback_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\call_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\order_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\events_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\beer_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\qr_b_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\qr_qf_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\wait_qr_icon.gif" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\delete_order_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Fonts\OpenSans-Bold.ttf" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Fonts\OpenSans-BoldItalic.ttf" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Fonts\OpenSans-ExtraBold.ttf" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Fonts\OpenSans-ExtraBoldItalic.ttf" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Fonts\OpenSans-Italic.ttf" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Fonts\OpenSans-Light.ttf" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Fonts\OpenSans-LightItalic.ttf" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Fonts\OpenSans-Regular.ttf" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Fonts\OpenSans-Semibold.ttf" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Fonts\OpenSans-SemiboldItalic.ttf" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\beer_home_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\food_home_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\order_home_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\call_home_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\events_home_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\feedback_home_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Fonts\Roboto-Bold.ttf" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\menu_open_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\home_home_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\change_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\food_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\good_feedback_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\ok_feedback_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\bad_feedback_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\terrible_feedback_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\great_feedback_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\food_feedback_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\beer_feedback_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\services_feedback_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\events_feedback_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\feedback_close_icon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\backround_event_details.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\events_date_background.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\line_separator_event.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\left_event_arrow.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\right_event_arrow.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\sign_backround.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\facebook_logo.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Drawables\show_password.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Fonts\Roboto-Regular.ttf" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Fonts\Montserrat-Bold.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\Drawables\splash_icon.png" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<item>
+        <bitmap android:src="@drawable/archive_icon" android:tileMode="disabled" />
+    </item>-->
+    <item  android:layout_height="match_parent" android:layout_width="match_parent" 
+android:scaleType="centerCrop">
+        <bitmap android:src="@drawable/splash_icon" />
+    </item>
+</layer-list>

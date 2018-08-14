@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_content_background"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10">
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="9"
+        android:weightSum="10"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/titele_text_content"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:layout_marginBottom="@dimen/margin_10_in_dp"
+            android:text="Give US A feedback" />
+        <LinearLayout
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="10">
+            <RelativeLayout
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="6">
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:weightSum="10">
+                    <View
+                        android:layout_height="@dimen/margin_180_in_dp"
+                        android:layout_width="@dimen/margin_180_in_dp"
+                        android:id="@+id/view_service_image" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="10">
+                    <LinearLayout
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:orientation="vertical"
+                        android:weightSum="10">
+                        <View
+                            android:layout_weight="1.75"
+                            android:layout_height="0dp"
+                            android:layout_width="match_parent" />
+                        <FFImageLoading.Views.ImageViewAsync
+                            android:id="@+id/service_image_feedback"
+                            android:layout_height="0dp"
+                            android:layout_weight="5"
+                            android:layout_width="match_parent" />
+                        <TextView
+                            android:id="@+id/service_feedback_text"
+                            android:layout_height="0dp"
+                            android:layout_weight="1.5"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:text="Sometext" />
+                        <View
+                            android:layout_weight="1.75"
+                            android:layout_height="0dp"
+                            android:layout_width="match_parent" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <View
+            android:layout_weight="0.5"
+            android:layout_height="0dp"
+            android:layout_width="match_parent" />
+        <RelativeLayout
+            android:layout_weight="2"
+            android:layout_height="0dp"
+            android:layout_width="match_parent">
+            <Int.Droid.Factories.Adapter.RecyclerView.BaseRecyclerView
+                android:id="@+id/emoji_list"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_80_in_dp" />
+        </RelativeLayout>
+        <View
+            android:layout_weight="0.5"
+            android:layout_height="0dp"
+            android:layout_width="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent">
+        <TextView
+            android:id="@+id/submit_fedback_text"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:text="Submitt feedback" />
+    </LinearLayout>
+</LinearLayout>
